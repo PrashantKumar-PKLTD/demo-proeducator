@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { FaWhatsappSquare } from "react-icons/fa";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/shared/Footer";
 
@@ -30,6 +31,16 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+          <a
+            href="https://wa.me/+919561799936"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-circle btn-lg bg-[#25D366] hover:bg-[#128C7E] border-none text-white shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <FaWhatsappSquare className="w-6 h-6" />
+          </a>
+        </div>
       </body>
     </html>
   );
